@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Recreation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sticky Dark Header Navigation -->
+  <header class="sticky-nav">
+    <div class="nav-container">
+      <!-- AAA at the start -->
+      <div class="aaa-brand">AAA</div>
+      
+      <!-- Nav Links at the end -->
+      <div class="nav-links">
+        <a href="#page1" class="nav-link active">Page 1</a>
+        <a href="#page2" class="nav-link">Page 2</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page 1 Section -->
+  <section id="page1" class="page-section">
+    <div class="main-wrapper">
+
+      <!-- Court / Grid Container -->
+      <div class="court-container">
+        
+        <!-- Left Side -->
+        <div class="court-side">
+          <div class="court-row">
+            <div class="green-box"></div>
+            <div class="green-box"></div>
+          </div>
+          <div class="blue-strip"></div>
+          <div class="court-row">
+            <div class="green-box"></div>
+            <div class="green-box"></div>
+          </div>
+        </div>
+
+        <!-- Center Net Divider -->
+        <div class="net-divider"></div>
+
+        <!-- Right Side -->
+        <div class="court-side">
+          <div class="court-row">
+            <div class="green-box"></div>
+            <div class="green-box"></div>
+          </div>
+          <div class="blue-strip"></div>
+          <div class="court-row">
+            <div class="green-box"></div>
+            <div class="green-box"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Card Component -->
+      <div class="info-card">
+        <h2>This is sample good title</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium iure quisquam unde ea iusto fuga similique ex? Sint nulla blanditiis voluptatum enim voluptate perspiciatis quae. Autem nisi tenetur excepturi vel.
+        </p>
+        <button class="learn-btn">Learn More</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Page 2 Section -->
+  <section id="page2" class="page-section">
+    <div class="main-wrapper">
+      <div class="info-card" style="width: 100%;">
+        <h2>Page 2 Content</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script to handle active nav states -->
+  <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navLinks.forEach(nav => nav.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
